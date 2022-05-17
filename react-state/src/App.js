@@ -18,6 +18,8 @@ const App = () => {
         setCount(count + 1);
     }
     const decreaseCount = () => {
+        if (count === 0)
+            return alert("منفی نمیشه !")
         setCount(count - 1);
     }
     const resetCount = () => {
@@ -26,10 +28,10 @@ const App = () => {
 
     //inline styling
     const myStyle = {
-        color : 'aqua',
-        border : '2px dashed red',
-        padding:'0.5em',
-        borderRadius : '1em'
+        color: 'aqua',
+        border: '2px dashed red',
+        padding: '0.5em',
+        borderRadius: '1em'
     }
 
     return (
