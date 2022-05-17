@@ -1,4 +1,6 @@
 import {useState} from "react";
+import Counter from "./components/Counter";
+import "./App.css";
 
 const App = () => {
     // const {count, name, family} = this.state;
@@ -22,10 +24,11 @@ const App = () => {
         setCount(0);
     }
     return (
-        <div>
+        <div className="App">
             <header>
                 <h1>شمارنده من :</h1>
             </header>
+            <Counter/>
         </div>
     )
 }
