@@ -1,31 +1,32 @@
-import {Component} from "react";
+import {useState} from "react";
 
-class App extends Component {
-    state = {
-        count: 0,
-        name: "Sasan",
-        family: "GhafooryFard"
-    }
+const App = () => {
+    // const {count, name, family} = this.state;
 
-    changeState(){
-        this.setState({
-            count:5
-        })
+    //React Hock :
+    const [count, setCount] = useState(0);
+    // const [arr, setArr] = useState([]);
+    // const [name, setName] = useState("Sasan");
+    // const [family, setFamily] = useState("GhafooryFard");
+    //
+    // const changeCount = () => {
+    //     setCount(5);
+    // }
+    const increaseCount = () => {
+        setCount(count + 1);
     }
-
-    render() {
-        const {count, name, family} = this.state;
-        return (
-            <div>
-                <header>
-                    <h1>شمارنده من :</h1>
-                </header>
-                <p>{count}</p>
-                <p>{name}</p>
-                <p>{family}</p>
-            </div>
-        )
+    const decreaseCount = () => {
+        setCount(count - 1);
     }
+    const resetCount = () => {
+        setCount(0);
+    }
+    return (
+        <div>
+            <header>
+                <h1>شمارنده من :</h1>
+            </header>
+        </div>
+    )
 }
-
 export default App;
