@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 const Counter = ({inc, dec, count, rest}) => {
     return (
         <div>
-            <h1>{count}</h1>
+            <h1 className="App-counter">{count}</h1>
             <button onClick={inc}>+</button>
             <button onClick={dec}>-</button>
             <br/>

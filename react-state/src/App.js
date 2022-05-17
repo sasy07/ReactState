@@ -23,10 +23,19 @@ const App = () => {
     const resetCount = () => {
         setCount(0);
     }
+
+    //inline styling
+    const myStyle = {
+        color : 'aqua',
+        border : '2px dashed red',
+        padding:'0.5em',
+        borderRadius : '1em'
+    }
+
     return (
         <div className="App">
-            <header>
-                <h1>شمارنده من :</h1>
+            <header className="App-header">
+                <h1 style={myStyle}>شمارنده من</h1>
             </header>
             <Counter inc={increaseCount}
                      dec={decreaseCount}
