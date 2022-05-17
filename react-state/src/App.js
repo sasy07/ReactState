@@ -1,6 +1,7 @@
 import {useState} from "react";
 import Counter from "./components/Counter";
-import "./App.css";
+// import "./App.css";
+import styles from './App.module.css';
 
 const App = () => {
     // const {count, name, family} = this.state;
@@ -35,8 +36,8 @@ const App = () => {
     }
 
     return (
-        <div className="App">
-            <header className="App-header">
+        <div className={styles.App}>
+            <header className={styles.AppHeader}>
                 <h1 style={myStyle}>شمارنده من</h1>
             </header>
             <Counter inc={increaseCount}
