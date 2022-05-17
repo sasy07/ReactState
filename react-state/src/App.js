@@ -28,7 +28,10 @@ const App = () => {
             <header>
                 <h1>شمارنده من :</h1>
             </header>
-            <Counter/>
+            <Counter inc={increaseCount}
+                     dec={decreaseCount}
+                     rest={resetCount}
+                     count={count}/>
         </div>
     )
 }

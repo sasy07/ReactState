@@ -1,35 +1,22 @@
-import {Component} from "react";
+import PropTypes from 'prop-types'
 
+const Counter = ({inc, dec, count, rest}) => {
+    return (
+        <div>
+            <h1>{count}</h1>
+            <button onClick={inc}>+</button>
+            <button onClick={dec}>-</button>
+            <br/>
+            <button onClick={rest}>💥</button>
+        </div>
+    )
+}
 
-class Counter extends Component {
-    constructor() {
-        super();
-        this.state = {
-            name: "sasan"
-        }
-        // this.changeName = this.changeName.bind(this);
-    }
-
-    // changeName (){
-    //     this.setState({
-    //         name : "mrlost"
-    //     })
-    // }
-
-    changeName = () => {
-        this.setState({
-            name: "mrlost"
-        })
-    }
-
-    render() {
-        return (
-            <div>
-                <p>{this.state.name} </p>
-                <button onClick={this.changeName}>تغییر نام</button>
-            </div>
-        )
-    }
+Counter.propTypes = {
+    inc: PropTypes.func,
+    dec: PropTypes.func,
+    rest: PropTypes.func,
+    count: PropTypes.number
 }
 
 export default Counter;
